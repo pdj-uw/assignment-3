@@ -33,10 +33,12 @@ public:
     LinkedList(size_t capacity) : LinkedList<T>() {} // to make test consistent
 
     // copy constructor
-    LinkedList(const LinkedList<T> &other_list) : LinkedList() {
-        /*
-         * TODO: homework
-         */
+    LinkedList(const LinkedList<T> &other_list) : LinkedList()
+    {
+        ListNode<T> *node;
+
+        for (node = other_list.head->next; node; node = node->next)
+            push_back(node->val);
     }
 
     // destructor

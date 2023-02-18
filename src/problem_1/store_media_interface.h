@@ -18,16 +18,11 @@ public:
     }
 
     virtual bool mercy_rule_apply() {
-        /*
-         * TODO: homework
-         */
+	    return (inventory_id % 13 == 0);
     }
 
     bool operator==(const StoreMediaInterface &other_media) const {
-        /*
-         * TODO: homework
-         */
-        return false;
+        return (inventory_id == other_media.inventory_id);
     };
 
     bool operator!=(const StoreMediaInterface &other_media) const {
